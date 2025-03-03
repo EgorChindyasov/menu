@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Азиатское барное меню</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #ff6f61;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .menu-item {
+            flex: 1 1 300px;
+            background-color: #2a2a2a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover img {
+            transform: scale(1.1);
+        }
+        .menu-item h2 {
+            font-size: 1.8em;
+            color: #ff6f61;
+            margin: 20px 0 10px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .menu-item p {
+            font-size: 1em;
+            color: #ccc;
+            padding: 0 20px 20px;
+            text-align: center;
+        }
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 111, 97, 0.3), rgba(255, 193, 7, 0.3));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .menu-item:hover::before {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .menu-item {
+                flex: 1 1 100%;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Азиатское барное меню</h1>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x200" alt="Сакура Блисс">
+                <h2>Сакура Блисс</h2>
+                <p>Нежный коктейль с саке, цветами сакуры и личи. Подается с лепестками роз.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x200" alt="Драконий Огонь">
+                <h2>Драконий Огонь</h2>
+                <p>Острый микс текилы, имбиря и красного перца. Для смелых гурманов.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x200" alt="Зеленый Самурай">
+                <h2>Зеленый Самурай</h2>
+                <p>Освежающий коктейль с джином, мятой и лаймом. Идеален для жаркого вечера.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x200" alt="Лунный Свет">
+                <h2>Лунный Свет</h2>
+                <p>Таинственный микс водки, сиропа бабочки горошка и лимонного сока.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x200" alt="Золотой Феникс">
+                <h2>Золотой Феникс</h2>
+                <p>Элитный коктейль с шампанским, золотой пыльцой и экстрактом манго.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
